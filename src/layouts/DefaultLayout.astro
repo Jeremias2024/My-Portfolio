@@ -1,0 +1,207 @@
+---
+
+---
+
+<html>
+    <head>
+        <slot name="Head"></slot>
+    </head>
+    <body>
+        <header>
+            <nav class="Header">
+                <ul>
+                    <li><a href="/" title="Home">Home</a></li>
+                    <li><a href="/Tech" title="Herramientas">Herramientas</a></li>
+                    <li><a href="#proyectos-menu" title="Proyectos">Proyectos</a></li>
+                    <li><a href="/contacto" title="Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div id="proyectos-menu" class="popup-menu">
+                <ul>
+                    <!--Lo siento, no he tenido ganas de hacer todo un script dedicado para ésta funcionalidad del menu. :( -->
+                    <a href="#" class="close-btn">×</a>
+                    <li><a href="/DesarrolloWeb" title="Desarrollo Web">Desarrollo Web</a></li>
+                    <hr>
+                    <li><a href="/DiseñoGrafico" title="Diseño Gráfico">Diseño Gráfico</a></li>
+                    <hr>
+                    <li><a href="/Videos" title="Edición de Videos">Edición de Videos</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <slot />
+        </main>
+        <div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"es","native_language_names":true,"detect_browser_language":true,"languages":["es","en","fr","de"],"wrapper_selector":".gtranslate_wrapper","switcher_horizontal_position":"right","flag_style":"3d","switcher_text_color":"#f7f7f7","switcher_arrow_color":"#f2f2f2","switcher_border_color":"#161616","switcher_background_color":"#303030","switcher_background_shadow_color":"#474747","switcher_background_hover_color":"#3a3a3a","dropdown_text_color":"#eaeaea","dropdown_hover_color":"#748393","dropdown_background_color":"#474747"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
+        <footer>
+            <p>Diseño y Producción realizadas por Jeremías Zamora.</p>
+            <p>Todos los derechos reservados · 2024</p>
+        </footer>
+    </body>
+</html>
+
+
+<style class="Media">
+    
+</style>
+
+<style>
+@font-face {
+        font-family: 'Raleway-ExtraBold' ;
+        src: url('../Assets/Raleway-ExtraBold.ttf');}
+@font-face {
+        font-family: "Raleway-Regular";
+        src: url('../Assets/Raleway-Regular.ttf');}
+@keyframes bounceFadeIn {
+    0% { transform: translateY(-30px); opacity: 0; }
+    50% { transform: translateY(-10px); opacity: 1; }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+html {
+  text-align: center;
+  background: 
+    linear-gradient(to bottom, #1E1E20, #0E0E11) fixed,
+    url('/Assets/6438c3059d443cd7a78762eb_stars-bg.svg');
+  background-size: contain;
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+  min-height: 100vh;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+.Header ul {
+    position: sticky;
+    top: 0;
+    animation: bounceFadeIn 0.5s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3rem;
+    max-width: 27rem;
+    font-family: 'Raleway-Regular';
+    font-size: 0.9rem;
+    color: white;
+    background-color: #252529;
+    border: 1px solid #434343;
+    padding: 1.1rem;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.Header ul:hover {
+        border: 1px solid #405FA7;
+    }
+
+.Header li{
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease-in-out;
+    }
+.Header li:hover{
+        color: #405FA7;
+    }
+    
+
+    footer {
+    float: bottom;
+    margin: 0 auto;
+     width: 100%;
+     color: white;
+     padding: 1rem;
+     margin-top: 3rem;
+     font-size: 1rem;
+     text-align: center;
+     font-family: "Raleway-Regular";
+}
+
+    footer p:first-child {
+     margin-bottom: 0.5rem;
+}
+
+.popup-menu {
+    display: block;
+    opacity: 0;
+    height: 50%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    backdrop-filter: blur(1em);
+    position: absolute;
+}
+
+.popup-menu:target {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 1;
+    pointer-events:all;
+}
+
+.popup-menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    background-color: #111113bb;
+    backdrop-filter: blur(1em);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid #434343;
+    border-radius: 15px;
+}
+
+.popup-menu ul li a {
+    font-family: "Raleway-Regular";
+    display: block;
+    padding: 2em;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    transition: all 0.3s ease-in-out;
+}
+
+.popup-menu ul li a:hover {
+    color: #405FA7;
+}
+.popup-menu hr {
+    border-color: #434343;
+}
+.close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        text-decoration: none;
+        font-size: 2rem;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    .close-btn:hover {
+        color: #405FA7;
+    }
+
+
+</style>

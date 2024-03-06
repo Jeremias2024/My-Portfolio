@@ -1,0 +1,66 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Titulo from '../../components/Entrys/presentacionvod.astro';
+---
+
+<DefaultLayout>
+    <meta slot="Head" http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta slot="Head" http-equiv="Content-Language" content="es">
+	<meta slot="Head" http-equiv="Content-Language" content="en">
+	<meta slot="Head" name="viewport" content="width=device-width, initial-scale=1">
+	<meta slot="Head" name="robots" content="noodp, noydir, index, follow">
+	<meta slot="Head" name="description" content="Diseño y Desarrollo Web">
+	<meta slot="Head" name="keywords" content="Diseño, Diseño Gráfico, Diseño Digital, Diseño Web, Desarrollo Front-End, Desarrollo Web, Programación, Portfolio, Edición de Videos, Editor, Diseñador Freelance, Desarrollador Freelancer">
+	<meta slot="Head" name="author" content="Jeremías Zamora">
+	<meta slot="Head" name="copyright" content="2024, Jeremías Zamora">
+	<meta slot="Head" property="og:title" content="Jeremías Zamora">
+	<meta slot="Head" property="og:description" content="Edición de Videos de todo tipo.">
+	<meta slot="Head" property="og:image" content='/Assets/Spaceworks/Showreel.png'>
+	<link slot="Head" rel="icon" type="image/svg+xml" href="/favicon.png">
+	<meta slot="Head" name="generator" content={Astro.generator}>
+	<title slot="Head">Mi Demo Reel</title>
+
+    <Titulo presvod= {{ 
+
+        titulo: 'DEMO REEL',
+        descripcion: 'Cortometraje especialmente editado y producido para demostrar mis habilidades como editor de videos.',
+        etiqueta1: 'Edición de Video',
+        etiqueta2: '2023',
+        etiqueta3: 'Motion Effects',
+        source: 'https://www.youtube.com/embed/AMj7iMIynaE?si=04JxRtYAL1GAtSak',
+        title: 'Demo Reel',
+        
+    }} />
+
+    <div class="C">
+        <a href="/Videos" title="Proyectos">Volver Atrás</a>
+    </div>
+
+
+    <style>
+    @font-face {
+    font-family: Raleway-Regular;
+    src: url('/Assets/Raleway-Regular.ttf');
+}
+    .C {
+                display: flex;
+                justify-content: center;
+                margin-top: 5em;
+                gap: 1.5em;
+    }
+    a {
+                font-family: Raleway-Regular;
+                color: white;
+                padding: 0.8em;
+                background-color: #1e1e20;
+                border: solid 1px #434343;
+                border-radius: 15px;
+                box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+                transition: all 0.3s ease-in-out;
+    }
+    a:hover {
+                border: solid 1px #405FA7;
+                transform: scale(95%);
+    }
+        </style>
+</DefaultLayout>

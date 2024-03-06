@@ -1,0 +1,165 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Bloque1 from '../components/Home/bloques1.astro';
+import Bloque2 from '../components/Home/bloques2.astro';
+import Bloque3 from '../components/Home/bloques3.astro';
+import Bloque4 from '../components/Home/bloques4.astro';
+---
+
+<DefaultLayout>
+	<meta slot="Head" http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta slot="Head" http-equiv="Content-Language" content="es">
+	<meta slot="Head" http-equiv="Content-Language" content="en">
+	<meta slot="Head" name="viewport" content="width=device-width, initial-scale=1">
+	<meta slot="Head" name="robots" content="noodp, noydir, index, follow">
+	<meta slot="Head" name="description" content="Diseño y Desarrollo Web">
+	<meta slot="Head" name="keywords" content="Diseño, Diseño Gráfico, Diseño Digital, Diseño Web, Desarrollo Front-End, Desarrollo Web, Programación, Portfolio, Edición de Videos, Editor, Diseñador Freelance, Desarrollador Freelancer">
+	<meta slot="Head" name="author" content="Jeremías Zamora">
+	<meta slot="Head" name="copyright" content="2024, Jeremías Zamora">
+	<meta slot="Head" property="og:title" content="Mi Portfolio">
+	<meta slot="Head" property="og:description" content="Mostrando mis habilidades como diseñador y desarrollador web.">
+	<meta slot="Head" property="og:image" content="URL de la imagen">
+	<link slot="Head" rel="icon" type="image/svg+xml" href="/favicon.png">
+	<meta slot="Head" name="generator" content={Astro.generator}>
+	<title slot="Head">Jeremías Zamora | Home</title>
+	
+
+		<h1 class="Titulo">BIENVENIDOS</h1>
+		<h1 class="Titular">MI PORTFOLIO</h1>
+		<p>A mi portfolio personal, donde pueden conocer más sobre mí, mis habilidades, herramientas en las cuales soy proficiente, y en donde pueden ver mis proyectos y trabajos realizados.</p>
+		  <Bloque1 />
+		  <Bloque2 />
+		  <Bloque3 />
+		  <Bloque4 />
+
+<style class="MQ">
+	@media (max-width: 1025px) {
+		.Titulo {
+		padding: 0px;
+		font-size: 5rem;
+		-webkit-text-stroke: 3px white;
+		}
+
+		.Titular {
+		position: relative;
+        opacity: 60%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 45%, transparent 100%);
+        font-size: 6rem;
+        text-align: center;
+        -webkit-background-clip: text;
+		margin-top: -1em;
+		z-index: 1;
+        }
+
+		p {
+		font-size: 1rem;
+		margin: 0 auto;
+		margin-top: -4em;
+		}
+	}
+	@media (max-width: 881px) {
+		.Titulo {
+		padding: 0px;
+		font-size: 5rem;
+		-webkit-text-stroke: 3px white;
+		}
+
+		.Titular {
+		position: relative;
+        opacity: 60%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 45%, transparent 100%);
+        font-size: 6rem;
+        text-align: center;
+        -webkit-background-clip: text;
+		margin-top: -1em;
+		z-index: 1;
+        }
+
+		p {
+		font-size: 1rem;
+		margin: 0 auto;
+		margin-top: -4em;
+		}
+	}
+	@media (max-width: 768px) {
+		.Titulo {
+		padding: 0px;
+		font-size: 2.5rem;
+		-webkit-text-stroke: 1px white;
+		}
+
+		.Titular {
+		position: relative;
+        opacity: 60%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 45%, transparent 100%);
+        font-size: 3rem;
+        text-align: center;
+        -webkit-background-clip: text;
+		margin-top: -1em;
+		z-index: 1;
+        }
+
+		p {
+		font-size: 1rem;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: -2em;
+		}
+	}
+</style>
+
+
+<style>
+		@font-face {
+        font-family: 'Raleway-ExtraBold' ;
+        src: url('/Assets/Raleway-ExtraBold.ttf');}
+		@font-face {
+        font-family: "Raleway-Regular";
+        src: url('/Assets/Raleway-Regular.ttf');}
+
+	    .Titulo {
+			position: relative;
+			opacity: 100%;
+			padding: 25px;
+			font-size: 7rem;
+			font-family: 'Raleway-ExtraBold';
+			font-weight: bolder;
+			color: white;
+			-webkit-text-stroke: 3px white;
+			letter-spacing: 5px;
+			text-align: center;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+			z-index: 10;
+		}
+
+		.Titular {
+		position: relative;
+        opacity: 60%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 45%, transparent 100%);
+        font-family: Raleway;
+        font-weight: 900;
+        font-size: 11rem;
+        text-shadow: -5px -1px 0 rgba(0, 0, 0, 0.1);
+        text-align: center;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+		margin-top: -190px;
+		z-index: 1;
+        }
+
+		p {
+			font-family: 'Raleway-Regular';
+			color: white;
+			font-size: 1.5rem;
+			max-width: 37em;
+			text-align: center;
+			margin: 0 auto;
+			margin-top: -120px;
+
+		}
+
+				
+
+</style>
+</DefaultLayout>

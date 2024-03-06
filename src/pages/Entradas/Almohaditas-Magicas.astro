@@ -1,0 +1,94 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Titulo from '../../components/Entrys/presentacion.astro';
+import Cuerpo from '../../components/Entrys/explicacion.astro';
+import Demo from '../../components/Entrys/Demo Grid.astro';
+---
+
+<DefaultLayout>
+    <meta slot="Head" http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta slot="Head" http-equiv="Content-Language" content="es">
+	<meta slot="Head" http-equiv="Content-Language" content="en">
+	<meta slot="Head" name="viewport" content="width=device-width, initial-scale=1">
+	<meta slot="Head" name="robots" content="noodp, noydir, index, follow">
+	<meta slot="Head" name="description" content="Diseño y Desarrollo Web">
+	<meta slot="Head" name="keywords" content="Diseño, Diseño Gráfico, Diseño Digital, Diseño Web, Desarrollo Front-End, Desarrollo Web, Programación, Portfolio, Edición de Videos, Editor, Diseñador Freelance, Desarrollador Freelancer">
+	<meta slot="Head" name="author" content="Jeremías Zamora">
+	<meta slot="Head" name="copyright" content="2024, Jeremías Zamora">
+	<meta slot="Head" property="og:title" content="Almohaditas Landing Page">
+	<meta slot="Head" property="og:description" content="Presentación de Landing Page">
+	<meta slot="Head" property="og:image" content='/Assets/Proyectos para Portfolio/Diseño Web/Almohaditas Mágicas/AM Landing Page.png'>
+	<link slot="Head" rel="icon" type="image/svg+xml" href="/favicon.png">
+	<meta slot="Head" name="generator" content={Astro.generator}>
+	<title slot="Head">Almohaditas Mágicas</title>
+
+    <Titulo pres= {{ 
+
+        titulo: 'ALMOHADITAS MÁGICAS',
+        descripcion: 'Es un emprendimiento que se dedica a la producción y venta de productos naturales y terapias tradicionales para la salud y el bienestar general.',
+        etiqueta1: 'Landing Page',
+        etiqueta2: '2024',
+        etiqueta3: 'Sitio Web',
+        imagenUrl: '/Assets/Proyectos para Portfolio/Diseño Web/Almohaditas Mágicas/AM Landing Page.png',
+        imagenAlt: 'Almohaditas Landing',
+        imagenTitulo: 'Almohaditas Landing',
+        
+    }} />
+
+    <Cuerpo exp= {{ 
+
+    eti: 'El Sitio Web',
+    expli: 'La propietaria de este pequeño emprendimiento me contactó para crear su propio sitio web con el objetivo de aumentar la visibilidad de su marca y negocio en los motores de búsqueda, así como para automatizar la gestión de consultas y preguntas sobre sus productos. Dado que ella quería un sitio web informativo, decidimos crear una Landing Page siguiendo sus especificaciones. La página incluye llamadas claras a la acción que invitan a los visitantes a contactarla, mientras que el contenido está diseñado para crear expectativas sólidas y atractivas sobre sus productos.',
+    
+    }}/>
+
+    <Demo demo= {{
+    comentario1: 'Tecnologías Aplicadas',
+    comentarioin1: 'El diseño del sitio web se realizó en Adobe XD. Posteriormente, se desarrolló y puso en producción utilizando HTML y CSS, priorizando la optimización de los tiempos de carga.',
+    imagenUrl1: '/Assets/Spaceworks/HTML inter.PNG',
+    imagenAlt1: 'Overview',
+    imagenTitulo1: 'Almohaditas Code',
+    imagenUrl2: '/Assets/Spaceworks/AM Sitio.png',
+    imagenAlt2: 'Overview',
+    imagenTitulo2: 'Almohaditas Site',
+    comentario2: 'Concepto de Diseño',
+    comentarioin2: 'Diseñé este sitio utilizando una paleta de colores suaves y beige para evocar una sensación de finura y formalidad. Además, combiné tipografías sans-serif con inclinaciones italic en las descripciones para transmitir elegancia.',
+    imagenUrl3: '/Assets/Spaceworks/AM SITE.png',
+    imagenAlt3: 'Overview',
+    imagenTitulo3: 'Almohaditas Site',
+    }} />
+
+
+    <div class="C">
+        <a href="https://almohaditasmagicas.pages.dev" target="_blank" title="Site">Visitar Sitio</a>
+        <a href="/DesarrolloWeb" title="Proyectos">Volver Atrás</a>
+        <a href="https://github.com/Jeremias2024/Almohaditas-Magicas.git" target="_blank" title="Code">Ver Código</a>
+    </div>
+    
+        <style>
+            @font-face {
+    font-family: Raleway-Regular;
+    src: url('/Assets/Raleway-Regular.ttf');
+}
+            .C {
+                display: flex;
+                justify-content: center;
+                margin-top: 5em;
+                gap: 1.5em;
+            }
+            a {
+                font-family: Raleway-Regular;
+                color: white;
+                padding: 0.8em;
+                background-color: #1e1e20;
+                border: solid 1px #434343;
+                border-radius: 15px;
+                box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+                transition: all 0.3s ease-in-out;
+            }
+            a:hover {
+                border: solid 1px #405FA7;
+                transform: scale(95%);
+            }
+        </style>
+</DefaultLayout>

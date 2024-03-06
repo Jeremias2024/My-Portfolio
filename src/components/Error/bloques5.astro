@@ -1,0 +1,294 @@
+---
+
+---
+<div class="Tamaño">
+    <div class="ContenMayor">
+        <div class="ContDerecho">
+            <h1>Quizá te <br> interese...</h1>
+            <hr>
+            <h3>Redes Sociales</h3>
+            <a class="Reds" href="https://www.linkedin.com" target="_blank" title="LinkedIn">LinkedIn</a>
+            <a class="Reds" href="https://discord.com" target="_blank" title="Discord">Discord</a>
+            <a class="Reds" href="https://www.facebook.com" target="_blank" title="Facebook">Facebook</a>
+            <a class="Reds" href="https://www.instagram.com" target="_blank" title="Instagram">Instagram</a>
+            <hr>
+            <h3>Contacto</h3>
+            <a class="Mail" href="" target="_blank" title="Email">jeremiaszamora@gmail.com</a>
+            <a class="Whats" href="" target="_blank" title="Mi WhatsApp">+54 9 3413036196</a>
+            <button onclick="window.location.href='/contacto'">Formulario</button>
+
+        </div>
+        <div class="ContIzquierdo1">
+            <h1>No encontraste lo que estabas buscando?</h1>
+        </div>
+        <div class="ContIzquierdo2">
+            <a href="/" title="Home">
+            <h1>Volvamos a la página de inicio</h1>
+            <p class="Arr2">→</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style class="Query">
+    @media (max-width: 768px) {
+        .ContenMayor {
+        display: grid;
+        margin: 0 auto;
+        max-width: 21rem;
+        min-height: 65em;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto;
+        grid-gap: 5px;
+        margin-bottom: 5em;
+    }
+
+    .ContDerecho {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    .ContIzquierdo1 {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        min-height: 15em;
+    }
+
+    .ContIzquierdo2 {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        min-height: 15em;
+    }
+    .ContIzquierdo1 h1 {
+        font-size: 1.5rem;
+     }
+     .ContIzquierdo2 h1 {
+        font-size: 1rem;
+     }
+     .Arr2 {
+      font-size: 20px;
+      top: 33%;
+      left: 83%
+    }
+    .ContIzquierdo2:not(:hover) .Arr2 {
+       animation-name: none;
+    }
+    .ContIzquierdo2:hover .Arr2 {
+       animation-name: none;
+       color: #405FA7;
+    }
+    .ContDerecho {
+        min-height: 40em;
+    }
+    .ContDerecho h1 {
+        font-size: 1.5rem;
+    }
+}
+</style>
+
+
+<style class="TextDer">
+    @font-face {
+        font-family: 'Raleway-Italic';
+        src: url('../Assets/Raleway-Italic.ttf');
+    }
+
+    .ContDerecho {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .ContDerecho h1 {
+        font-family: "Raleway-Regular";
+        font-weight: 700;
+        font-size: 2.3rem;
+        letter-spacing: 2px;
+        margin: 0px auto;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .ContDerecho a {
+        transition: all 0.3s ease-in-out;
+        font-family: 'Raleway-Italic';
+        font-weight: 300;
+    }
+
+    .ContDerecho a:hover {
+        color:#405FA7 ;
+    }
+
+    .ContDerecho hr, h3 {
+        color:#434343 ;
+        border-color: #434343;
+        font-family: "Raleway-Regular";
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .ContDerecho button {
+    color: white;
+    font-family: "Raleway-Regular";
+    font-weight: 500;
+    width: 7em;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    background-color: #1E1E20;
+    border-radius: 10px;
+    border: 1px solid #434343;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+ }
+
+ .ContDerecho button:hover{
+    border: 1px solid #405FA7;
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+ }
+ .ContDerecho button:active {
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
+    transform: translateY(5px);
+    color: #405FA7;
+
+ }
+</style>
+
+<style class="TextIzq">
+@font-face {
+        font-family: 'Raleway-ExtraBold' ;
+        src: url('../Assets/Raleway-ExtraBold.ttf');}
+@font-face {
+        font-family: "Raleway-Regular";
+        src: url('../Assets/Raleway-Regular.ttf');}
+
+     .ContIzquierdo1 h1 {
+        color: white;
+        font-family: "Raleway-Regular";
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out;
+     }
+
+     .ContIzquierdo2 h1 {
+        color: white;
+        font-family: "Raleway-Regular";
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out;
+        max-width: 350px;
+        padding-right: 20px;
+     }
+
+     .Arr2 {
+  position: absolute;
+  transform: rotate(-40deg);
+  color: white;
+  font-size: 40px;
+  font-family: Calibri;
+  font-weight: 200;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: none;
+}
+.ContIzquierdo2:hover .Arr2 {
+  animation-name: reg;
+  animation-fill-mode: forwards;
+  color: #405FA7;
+}
+
+.ContIzquierdo2:not(:hover) .Arr2 {
+  animation-name: des;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reg {
+  0% {
+    top: 68%;
+    right: 47%;
+  }
+  100% {
+    top: 67%;
+    right: 46%;
+  }
+}
+
+@keyframes des {
+  0% {
+    top: 67%;
+    right: 46%;
+  }
+  100% {
+    top: 68%;
+    right: 47%;
+  }
+}
+</style>
+
+<style class="Grid">
+    .Tamaño {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ContenMayor {
+        display: grid;
+        margin: 0 auto;
+        width: 50rem;
+        height: 600px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 15px;
+        position: relative;
+    }
+
+    .ContDerecho {
+        grid-column: 5 / 12;
+        grid-row: 1 / 5;
+        background-color: #1E1E20;
+        border: 1px solid #434343;
+        border-radius: 20px;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .ContIzquierdo1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 1 / 5;
+        grid-row: 1 / 3;
+        background-color: #1E1E20;
+        border: 1px solid #434343;
+        border-radius: 20px;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .ContIzquierdo2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 1 / 5;
+        grid-row: 3 / 5; 
+        background-color: #1E1E20;
+        border: 1px solid #434343;
+        border-radius: 20px;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .ContDerecho:hover {
+        border: 1px solid #405FA7;
+    }
+    .ContIzquierdo1:hover {
+        border: 1px solid #405FA7;
+    }
+    .ContIzquierdo2:hover {
+        border: 1px solid #405FA7;
+    }
+</style>

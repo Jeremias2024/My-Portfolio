@@ -1,0 +1,36 @@
+---
+const { long } = Astro.props;
+---
+<div class="Cnt">
+<img class="Uno" src={long.imagenUrl} alt={long.imagenAlt} title={long.imagenTitulo} loading="lazy"/>
+<img class="Dos" src={long.imagenUrl2} alt={long.imagenAlt2} title={long.imagenTitulo2} loading="lazy"/>
+</div>
+
+<style>
+@font-face {
+        font-family: 'Raleway-ExtraBold' ;
+        src: url('../Assets/Raleway-ExtraBold.ttf');}
+		@font-face {
+        font-family: "Raleway-Regular";
+        src: url('../Assets/Raleway-Regular.ttf');}
+
+.Cnt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    margin-top: 5em;
+    max-width: 60em;
+    height: auto;
+    gap: 3em;
+}
+
+.Uno {
+    border: 1px solid #434343;
+    border-radius: 20px;
+}
+.Dos {
+    border: 1px solid #434343;
+    border-radius: 20px;
+}
+
+</style>

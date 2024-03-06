@@ -1,0 +1,107 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Titulo from '../../components/Entrys/presentacion.astro';
+import Cuerpo from '../../components/Entrys/explicacion.astro';
+---
+
+<DefaultLayout>
+    <meta slot="Head" http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta slot="Head" http-equiv="Content-Language" content="es">
+	<meta slot="Head" http-equiv="Content-Language" content="en">
+	<meta slot="Head" name="viewport" content="width=device-width, initial-scale=1">
+	<meta slot="Head" name="robots" content="noodp, noydir, index, follow">
+	<meta slot="Head" name="description" content="Diseño y Desarrollo Web">
+	<meta slot="Head" name="keywords" content="Diseño, Diseño Gráfico, Diseño Digital, Diseño Web, Desarrollo Front-End, Desarrollo Web, Programación, Portfolio, Edición de Videos, Editor, Diseñador Freelance, Desarrollador Freelancer">
+	<meta slot="Head" name="author" content="Jeremías Zamora">
+	<meta slot="Head" name="copyright" content="2024, Jeremías Zamora">
+	<meta slot="Head" property="og:title" content="Diseño de Stream UI">
+	<meta slot="Head" property="og:description" content="Diseño de marcos y alertas para Stream.">
+	<meta slot="Head" property="og:image" content='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Portada en bruto.png'>
+	<link slot="Head" rel="icon" type="image/svg+xml" href="/favicon.png">
+	<meta slot="Head" name="generator" content={Astro.generator}>
+	<title slot="Head">Diseño de Stream UI</title>
+
+    <Titulo pres= {{ 
+
+        titulo: 'INTERFAZ DE STREAM',
+        descripcion: 'Dentro de éste apartado podrás encontrar las transparencias que creé para modelar mi interfaz de usuario en la plataforma Twitch para transmisiones en vivo. También podrás encontrar las alertas personalizadas que creé para las acciones correspondientes de los espectadores.',
+        etiqueta1: 'Ilustración y Montaje',
+        etiqueta2: '2023',
+        etiqueta3: 'Proyecto Propio',
+        imagenUrl: '/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Portada en bruto.png',
+        imagenAlt: 'Portada',
+        imagenTitulo: 'Portada',
+        
+    }} />
+
+    <Cuerpo exp= {{ 
+
+    eti: 'Elementos de Stream',
+    expli: 'En este proyecto particular, diseñé varios marcos para personalizar mi página en la plataforma de streaming de Twitch. Estos marcos se utilizaron para mostrar en pantalla el chat en vivo, darle a mi cámara un borde personalizado y crear paneles de información dentro de mi perfil. Además, creé variantes para las alertas que me avisarían cuando un usuario realizara alguna acción, como seguirme, suscribirse, resuscribirse, hacer un raideo, realizar donaciones y más.',
+    
+    }}/>
+    <div class="Triples">
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Alertas/Alerta Seguidor.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Alertas/Alerta Suscriptor.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Alertas/Alerta resuscriptor.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Alertas/Alerta Twitch Prime.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Alertas/Alerta regalo de sub.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Alertas/Alerta Raideo.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Alertas/Alerta donación.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/About Me.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Diseños.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Donaciones.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Reglas.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Offline Twitch.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Marco stream.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Marco Cámara.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Marco de Chat.png' alt='Stream' title='Stream' loading="lazy" />
+        <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Interfaz de Stream/Marcos/Outro.png' alt='Stream' title='Stream' loading="lazy" />
+        </div>
+
+    <div class="C">
+        <a href="/DiseñoGrafico" title="Proyectos">Volver Atrás</a>
+    </div>
+    
+    <style>
+    @font-face {
+    font-family: Raleway-Regular;
+    src: url('/Assets/Raleway-Regular.ttf');
+}
+    .C {
+                display: flex;
+                justify-content: center;
+                margin-top: 5em;
+                gap: 1.5em;
+    }
+    a {
+                font-family: Raleway-Regular;
+                color: white;
+                padding: 0.8em;
+                background-color: #1e1e20;
+                border: solid 1px #434343;
+                border-radius: 15px;
+                box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+                transition: all 0.3s ease-in-out;
+    }
+    a:hover {
+                border: solid 1px #405FA7;
+                transform: scale(95%);
+    }
+    .Triples img {
+    margin: 0 auto;
+    border: solid 1px #434343;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+    }   
+    .Triples {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    max-width: 50em;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+    </style>
+</DefaultLayout>

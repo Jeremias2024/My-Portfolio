@@ -1,0 +1,92 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Titulo from '../../components/Entrys/presentacion.astro';
+---
+
+<DefaultLayout>
+    <meta slot="Head" http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta slot="Head" http-equiv="Content-Language" content="es">
+	<meta slot="Head" http-equiv="Content-Language" content="en">
+	<meta slot="Head" name="viewport" content="width=device-width, initial-scale=1">
+	<meta slot="Head" name="robots" content="noodp, noydir, index, follow">
+	<meta slot="Head" name="description" content="Diseño y Desarrollo Web">
+	<meta slot="Head" name="keywords" content="Diseño, Diseño Gráfico, Diseño Digital, Diseño Web, Desarrollo Front-End, Desarrollo Web, Programación, Portfolio, Edición de Videos, Editor, Diseñador Freelance, Desarrollador Freelancer">
+	<meta slot="Head" name="author" content="Jeremías Zamora">
+	<meta slot="Head" name="copyright" content="2024, Jeremías Zamora">
+	<meta slot="Head" property="og:title" content="Edición Artística de Imágenes">
+	<meta slot="Head" property="og:description" content="Edición Artística de Imágenes y Dibujos">
+	<meta slot="Head" property="og:image" content='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Artístico 1.jpeg'>
+	<link slot="Head" rel="icon" type="image/svg+xml" href="/favicon.png">
+	<meta slot="Head" name="generator" content={Astro.generator}>
+	<title slot="Head">Artísticos</title>
+
+    <Titulo pres= {{ 
+
+        titulo: 'EDICIONES ARTÍSTICAS',
+        descripcion: 'Éstas son algunas ediciones de imágenes y dibujos pre-existentes que he realizado como proyectos personales para poner a prueba mis habilidades con Photoshop.',
+        etiqueta1: 'Fotomontaje',
+        etiqueta2: '2021-2022',
+        etiqueta3: 'Proyecto Personal',
+        imagenUrl: '/Assets/Spaceworks/Portada.png',
+        imagenAlt: 'Portada',
+        imagenTitulo: 'Portada',
+        
+    }} />
+<div class="CON">
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Star Wars.PNG' alt='' title='' loading="lazy" />
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Star Wars 2.PNG' alt='' title='' loading="lazy" />
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Jeanne 3.png' alt='' title='' loading="lazy" />
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Ana Amari.PNG' alt='' title='' loading="lazy" />
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Reinhardt.PNG' alt='' title='' loading="lazy" />
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Jeanne 1.png' alt='' title='' loading="lazy" />
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Jeanne 2.png' alt='' title='' loading="lazy" />
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Artístico 1.jpeg' alt='' title='' loading="lazy" />
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Artístico 2.jpeg' alt='' title='' loading="lazy" />
+    <img src='/Assets/Proyectos para Portfolio/Diseño Gráfico/Artísticos/Artístico 3.jpeg' alt='' title='' loading="lazy" />
+</div>
+
+    <div class="C">
+        <a href="/DiseñoGrafico" title="Proyectos">Volver Atrás</a>
+    </div>
+    
+        <style>
+@font-face {
+    font-family: Raleway-Regular;
+    src: url('/Assets/Raleway-Regular.ttf');
+}
+
+.C {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    gap: 1.5em;
+}
+a {
+    font-family: Raleway-Regular;
+    color: white;
+    padding: 0.8em;
+    background-color: #1e1e20;
+    border: solid 1px #434343;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+a:hover {
+    border: solid 1px #405FA7;
+    transform: scale(95%);
+}
+
+.CON {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3em;
+}
+
+img {
+    margin: 0 auto;
+    border: solid 1px #434343;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+}
+        </style>
+</DefaultLayout>

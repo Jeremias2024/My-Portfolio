@@ -1,0 +1,479 @@
+---
+
+---
+<div class="Boxes">
+
+<div class="BoxUp">
+    <h1>Formulario de Contacto</h1>
+    <p>¿Tienes alguna pregunta para hacerme, o algún proyecto que quieras realizar?<br> ¡Escríbeme un mensaje!</p>
+</div>
+
+<div class="BoxLeft">
+    <div class="info">
+        <h3>Información de Contacto</h3>
+        <p>Llena el formulario y me pondré en contacto contigo cuanto antes!</p>
+        <p style="margin-top: 20px; margin-bottom: 20px;">También puedes contactarme por medio de éstas vías:</p>
+        
+        <a class="Mail" href="" target="_blank" title="Email">Email: jeremiaszamora@gmail.com</a><br>
+        <a class="Whats" href="" target="_blank" title="Mi WhatsApp">Teléfono: +54 9 3413036196</a>
+    </div>
+    <div class="Links">
+        <a href="https://api.whatsapp.com/send?phone=+5493413036196&text=Hola%20Jerem%C3%ADas,%20vengo%20de%20tu%20sitio%20web%20y%20quiero%20ponerme%20en%20contacto%20contigo." class="button" target="_blank" title="WhatsApp">
+            <img src="../Assets/WhatsApp.webp" alt="WhatsApp">
+          </a>
+          
+          <a href="https://www.instagram.com/jeruplux/" class="button" target="_blank" title="Instagram">
+            <img src="../Assets/Instagram.webp" alt="Instagram">
+          </a>
+          
+          <a href="https://www.linkedin.com/in/jeremiaszamora/" class="button" target="_blank" title="LinkedIn">
+            <img src="../Assets/Linkedin.webp" alt="LinkedIn">
+          </a>
+
+          <a href="https://discord.com/users/764651429780127745" class="button" target="_blank" title="Discord">
+            <img src="../Assets/Discord.webp" alt="Discord">
+          </a>
+          
+          <a href="https://www.facebook.com/InGodWeTrustOk/" class="button" target="_blank" title="Facebook">
+            <img src="../Assets/Facebook.webp" alt="Facebook">
+          </a>
+    </div>
+</div>
+
+<div class="BoxRight">
+    <form id="contactForm" action="https://formsubmit.co/c394f2593eb105c7bdf4a6de5afeeca1" method="POST">
+        <div class="P4">
+            <input type="hidden" name="_captcha" value="false">
+            <div id="successPopup" class="popup">
+                <p>¡Mensaje enviado con éxito!</p>
+            </div>
+            <div id="errorPopup" class="popup">
+                <p>¡Error al enviar el mensaje!</p>
+            </div>
+            <div id="preloader" class="preloader">
+                <p>Por favor, aguarde un momento.</p>
+                <div class="loader">
+                </div>
+            </div>            
+            <label> 
+            <input type="text" name="Nombre" placeholder="Tu Nombre" required>
+            </label>
+            <label> 
+            <input type="text" name="Apellido" placeholder="Tu Apellido" required>
+            </label>
+            <label> 
+            <input type="email" name="Email" placeholder="Tu dirección de E-Mail" required>
+            </label>
+            <label> 
+            <input type="tel" name="Teléfono" placeholder="Tu número de teléfono" required>
+            </label>
+        </div>
+
+            <h3>¿A cuál de éstos servicios se relaciona tu consulta? </h3>
+
+        <div class="OPS">
+            <label> 
+                <input type="radio" name="Opción" value="Diseño Gráfico"> Diseño Gráfico
+            </label>
+            <label> 
+                <input type="radio" name="Opción" value="Diseño y Desarrollo Web"> Diseño y Desarrollo Web
+            </label>
+            <label> 
+                <input type="radio" name="Opción" value="Edición de Videos"> Edición de Videos
+            </label>
+            <label> 
+                <input type="radio" name="Opción" value="Otro"> Otro
+            </label>
+        </div>
+    
+    <div class="TXT">
+    <label>
+    <textarea name="message" placeholder="Escribe tu mensaje aquí:" required></textarea>
+    </label>
+    
+    <button type="submit"> Enviar </button>
+    </div>
+    
+    </form>
+    </div>
+    <script>
+        const form = document.getElementById('contactForm') as HTMLFormElement | null;
+const successPopup = document.getElementById('successPopup') as HTMLElement | null;
+const errorPopup = document.getElementById('errorPopup') as HTMLElement | null;
+const preloader = document.getElementById('preloader') as HTMLElement | null;
+
+if (form && successPopup && errorPopup && preloader) {
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        preloader.style.display = 'block';
+        const formData = new FormData(form);
+        const response = await fetch(form.getAttribute('action') || '', {
+            method: 'POST',
+            body: formData
+        });
+        preloader.style.display = 'none';
+
+        if (response.ok) {
+            successPopup.style.display = 'block';
+            errorPopup.style.display = 'none';
+            form.reset();
+        } else {
+            successPopup.style.display = 'none';
+            errorPopup.style.display = 'block';
+        }
+
+        setTimeout(() => {
+            successPopup.style.display = 'none';
+            errorPopup.style.display = 'none';
+        }, 5000);
+    });
+} else {
+    console.error('No se encontraron elementos necesarios en el DOM');
+}
+
+</script>
+
+
+<style class="Medias">
+
+    @media (max-width: 768px) {
+        .Boxes {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto;
+        gap: 5px;
+        margin: 0 auto;
+        max-width: 21.5em;
+    }
+
+    .BoxLeft {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+    .info h3 {
+        padding-bottom: 0em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .info p {
+        font-size: 0.9rem;
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-bottom: 0em;
+        padding-top: 0em;
+    }
+    .info a {
+        font-size: 0.9rem;
+    }
+    .Links img {
+        margin: 10px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .BoxUp {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+    .BoxUp h1 {
+        font-size: 1.5rem;
+    }
+    .BoxUp p {
+        font-size: 0.9rem;
+    }
+
+    .BoxRight {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        min-height: 27em;
+    }
+    .BoxRight h3 {
+    font-size: 0.8rem;
+}
+.OPS {
+    font-size: 0.5rem;
+    margin: 1em;
+}
+    
+    }
+
+    </style>
+
+
+<style class="BU">
+    @font-face {
+        font-family: 'Raleway-ExtraBold' ;
+        src: url('../Assets/Raleway-ExtraBold.ttf');}
+		@font-face {
+        font-family: "Raleway-Regular";
+        src: url('../Assets/Raleway-Regular.ttf');}
+    .BoxUp h1 {
+        color: white;
+        font-family: Raleway-Regular;
+        font-weight: 700;
+        font-size: 2rem;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    }
+    .BoxUp p {
+        color: white;
+        font-family: Raleway-Regular;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+        font-size: 1.1rem;
+    }
+    .BoxUp {
+        transition: all 0.3s ease-in-out;
+    }
+    .BoxUp:hover {
+        border: 1px solid #405FA7;
+    }
+</style>
+
+<style class="BL">
+    .info h3 {
+        font-size: 1.2em;
+        font-family: Raleway-Regular;
+        font-weight: 700;
+        color: white;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        padding-bottom: 0.5em;
+        margin-top: -2em;
+        margin-bottom: 1em;
+    }
+    .info p {
+        color: white;
+        font-family: Raleway-Regular;
+        font-size: 0.8rem;
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-bottom: 2em;
+        padding-top: 1em;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+    .info a {
+        color: white;
+        font-family: Raleway-Regular;
+        font-size: 0.8rem;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease-in-out;
+    }
+    .info a:hover {
+        color: #405FA7;
+    }
+    .Links {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .Links img {
+        background-color: #1E1E20;
+        border: 1px solid #434343;
+        width: 2em;
+        margin: 6px;
+        margin-top: 0px;
+        margin-bottom: -2em;
+        padding: 5px;
+        border-radius: 9px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    .Links img:hover {
+        border: 1px solid #405FA7;
+    }
+    .BoxLeft {
+        transition: all 0.3s ease-in-out;
+    }
+    .BoxLeft:hover {
+        border: 1px solid #405FA7;
+    }
+</style>
+
+<style class="BR">
+.BoxRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 28em;
+    transition: all 0.3s ease-in-out;
+}
+.BoxRight:hover {
+    border: 1px solid #405FA7;
+}
+
+.P4 input {
+    background-color: #18181a;
+    border: 1px solid #434343;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    color: white;
+    width: 42.5%;
+    font-family: Raleway-Regular;
+    font-weight: 700;
+}
+.P4 input::placeholder {
+    color: #434343;
+}
+.BoxRight h3 {
+    color: white;
+    font-family: Raleway-Regular;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.OPS {
+    color: white;
+    font-family: Raleway-Regular;
+    font-size: 0.8rem;
+    margin: 1em;
+}
+.OPS label {
+    margin-right:7px;
+}
+.TXT textarea {
+    resize: none;
+    background-color: #18181a;
+    border: 1px solid #434343;
+    border-radius: 10px;
+    color:white;
+    width: 90%;
+    height: 10em;
+    padding: 1em;
+    font-family: Raleway-Regular;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+.TXT textarea::placeholder {
+    color: #434343;
+}
+.TXT {
+    display: flex;
+    flex-direction: column;
+}
+.TXT button {
+    background-color: #1c1c1d;
+    border: 1px solid #434343;
+    border-radius: 10px;
+    width: 4em;
+    padding: 3px;
+    margin: 0 auto;
+    margin-top: -0.2em;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-family: Raleway-Regular;
+    font-size: 0.9rem;
+}
+.TXT button:hover {
+    border: 1px solid #405FA7;
+}
+#successPopup,
+    #errorPopup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 15em;
+        height: 10em;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 1px solid #434343;
+        backdrop-filter: blur(1em);
+        font-family: Raleway-Regular;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 9999;
+        transition: all 0.3s ease-in-out;
+    }
+    #successPopup p,
+    #errorPopup p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    }
+    .preloader {
+        display: none;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(1em);
+    border: 1px solid #434343;
+    width: 15em;
+    height: 10em;
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid #434343;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+}
+.preloader p {
+    color: white;
+    font-family: Raleway-Regular;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 13em;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+</style>
+
+<style class="BO">
+    .Boxes {
+        display: grid;
+        margin: 0 auto;
+        margin-top: 5em;
+        margin-bottom: 5em;
+        max-width: 50rem;
+        min-height: 600px;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: auto 2fr auto;
+        grid-gap: 15px;
+    }
+    .BoxUp,
+    .BoxLeft,
+    .BoxRight {
+        background-color: #1E1E20;
+        border: 1px solid #434343;
+        border-radius: 20px;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease-in-out;
+    }
+
+    .BoxUp {
+        grid-column-start:1;
+        grid-column-end: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+    }
+    .BoxRight {
+        grid-column: 4/10;
+    }
+    .BoxLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        grid-column: 1/4;
+    }
+</style>
